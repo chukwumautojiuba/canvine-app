@@ -29,8 +29,8 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # API source code path (empty if not using)
           output_location: "dist" # Built app content directory
-          env:
-            VITE_APP_BASE_URL: ${{ secrets.VITE_APP_BASE_URL }}
+        env:
+          VITE_APP_BASE_URL: ${{ secrets.VITE_APP_BASE_URL }}  # Environment variable correctly indented
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
